@@ -1,14 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package oppts.communication;
+
+import oppts.communication.util.NodeManagerMessageQueueOutgoing;
+import oppts.communication.util.TCPConnectionSetup;
 
 /**
  *
  * @author jmishra
  */
-public class TaskDispatcher {
+public class TaskDispatcher implements Runnable {
+
+    @Override
+    public void run() {
+        while (true) {
+            AbstractMessage message = NodeManagerMessageQueueOutgoing.getMessage();
+            if (message != null) {
+                if (message instanceof AbstractTaskInitMessage) {
+                    TCPConnectionSetup.sendMessage(message, ((AbstractTaskInitMessage)message).getDestinationHostName(), ((AbstractTaskInitMessage)message).getDestinationPort());
+                } else {
+                    NodeManagerMessageQueueOutgoing.insertMessage(message);
+                }
+            }
+        }
+    }
     
 }

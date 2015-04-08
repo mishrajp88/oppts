@@ -5,10 +5,27 @@
  */
 package oppts.communication;
 
+import oppts.communication.util.NodeMessageQueueOutgoing;
+import oppts.communication.util.TCPConnectionSetup;
+
 /**
  *
  * @author jmishra
  */
-public class HeartBeatDispatcher {
+public class HeartBeatDispatcher implements Runnable {
+
+    @Override
+    public void run() {
+        while (true) {
+            AbstractMessage message = NodeMessageQueueOutgoing.getMessage();
+            if (message != null) {
+                if (message instanceof HeartBeatMessage) {
+                    TCPConnectionSetup.sendMessage(message, ((HeartBeatMessage)message).getDestinationHostName(), ((HeartBeatMessage)message).getDestinationPort());
+                } else {
+                    NodeMessageQueueOutgoing.insertMessage(message);
+                }
+            }
+        }
+    }
     
 }
