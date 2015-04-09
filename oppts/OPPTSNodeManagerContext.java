@@ -16,4 +16,25 @@ public class OPPTSNodeManagerContext {
             self = new OPPTSNodeManagerContext();
         return self;
     }
+    
+    private int nodeManagerPort;
+    private String nodeManagerHostName;
+
+    public int getNodeManagerPort() {
+        return nodeManagerPort;
+    }
+
+    public void setNodeManagerPort(int nodeManagerPort) {
+        this.nodeManagerPort = nodeManagerPort;
+    }
+
+    public String getNodeManagerHostName() {
+        return nodeManagerHostName;
+    }
+
+    public void setNodeManagerHostName(String nodeManagerHostName) {
+        this.nodeManagerHostName = nodeManagerHostName;
+    }
+    
+    
 }
