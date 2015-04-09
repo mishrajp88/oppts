@@ -5,6 +5,8 @@
  */
 package oppts.communication;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import oppts.communication.util.NodeMessageQueueOutgoing;
 import oppts.communication.util.TCPConnectionSetup;
 
@@ -14,16 +16,17 @@ import oppts.communication.util.TCPConnectionSetup;
  */
 public class HeartBeatDispatcher implements Runnable {
 
+    private long counter;
+    
     @Override
     public void run() {
         while (true) {
-            AbstractMessage message = NodeMessageQueueOutgoing.getMessage();
-            if (message != null) {
-                if (message instanceof HeartBeatMessage) {
-                    TCPConnectionSetup.sendMessage(message, ((HeartBeatMessage)message).getDestinationHostName(), ((HeartBeatMessage)message).getDestinationPort());
-                } else {
-                    NodeMessageQueueOutgoing.insertMessage(message);
-                }
+            HeartBeatMessage message = new HeartBeatMessage(counter);
+            TCPConnectionSetup.sendMessage(message, ((HeartBeatMessage)message).getDestinationHostName(), ((HeartBeatMessage)message).getDestinationPort());
+            try {
+                Thread.sleep(30000);
+            } catch (InterruptedException ex) {
+                
             }
         }
     }

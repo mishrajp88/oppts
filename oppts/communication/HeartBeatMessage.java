@@ -13,6 +13,11 @@ public class HeartBeatMessage extends AbstractMessage {
     
     private String destinationHostName;
     private int destinationPort;
+    private long sequence;
+    
+    public HeartBeatMessage(long sequence) {
+        this.sequence = sequence;
+    }
 
     public String getDestinationHostName() {
         return destinationHostName;
@@ -29,4 +34,14 @@ public class HeartBeatMessage extends AbstractMessage {
     public void setDestinationPort(int destinationPort) {
         this.destinationPort = destinationPort;
     }
+
+    public long getSequence() {
+        return sequence;
+    }
+
+    public void setSequence(long sequence) {
+        this.sequence = sequence;
+    }
+    
+    
 }
