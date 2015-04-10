@@ -5,10 +5,12 @@
  */
 package oppts.communication.multithreaded;
 
+import oppts.communication.AbstractTaskStatusMessage;
+
 /**
  *
  * @author jmishra
  */
-public class MultiThreadedTaskStatusMessage {
+public class MultiThreadedTaskStatusMessage extends AbstractTaskStatusMessage {
     
 }

@@ -5,10 +5,12 @@
  */
 package oppts.communication.disk;
 
+import oppts.communication.AbstractTaskStatusMessage;
+
 /**
  *
  * @author jmishra
  */
-public class DiskTaskStatusMessage {
+public class DiskTaskStatusMessage extends AbstractTaskStatusMessage {
     
 }

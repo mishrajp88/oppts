@@ -5,10 +5,12 @@
  */
 package oppts.communication.nqueen;
 
+import oppts.communication.AbstractTaskStatusMessage;
+
 /**
  *
  * @author jmishra
  */
-public class NQueenTaskStatusMessage {
+public class NQueenTaskStatusMessage extends AbstractTaskStatusMessage {
     
 }

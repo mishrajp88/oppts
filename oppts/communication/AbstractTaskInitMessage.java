@@ -7,6 +7,9 @@ package oppts.communication;
 public class AbstractTaskInitMessage extends AbstractMessage {
     private String destinationHostName;
     private int destinationPort;
+    private long taskId;
+    private boolean startImmediately;
+    private long startAfterTask;
 
     public String getDestinationHostName() {
         return destinationHostName;
@@ -23,6 +26,32 @@ public class AbstractTaskInitMessage extends AbstractMessage {
     public void setDestinationPort(int destinationPort) {
         this.destinationPort = destinationPort;
     }
+
+    public long getTaskId() {
+        return taskId;
+    }
+
+    public void setTaskId(long taskId) {
+        this.taskId = taskId;
+    }
+
+    public boolean isStartImmediately() {
+        return startImmediately;
+    }
+
+    public void setStartImmediately(boolean startImmediately) {
+        this.startImmediately = startImmediately;
+    }
+
+    public long getStartAfterTask() {
+        return startAfterTask;
+    }
+
+    public void setStartAfterTask(long startAfterTask) {
+        this.startAfterTask = startAfterTask;
+    }
+    
+    
     
     
 }

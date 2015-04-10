@@ -5,10 +5,12 @@
  */
 package oppts.communication.network;
 
+import oppts.communication.AbstractTaskInitMessage;
+
 /**
  *
  * @author jmishra
  */
-public class NetworkTaskInitMessage {
+public class NetworkTaskInitMessage extends AbstractTaskInitMessage {
     
 }

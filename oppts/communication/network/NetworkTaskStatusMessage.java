@@ -5,10 +5,12 @@
  */
 package oppts.communication.network;
 
+import oppts.communication.AbstractTaskStatusMessage;
+
 /**
  *
  * @author jmishra
  */
-public class NetworkTaskStatusMessage {
+public class NetworkTaskStatusMessage extends AbstractTaskStatusMessage {
     
 }

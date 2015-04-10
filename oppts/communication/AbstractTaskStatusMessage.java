@@ -8,6 +8,7 @@ public class AbstractTaskStatusMessage extends AbstractMessage {
     
     private String destinationHostName;
     private int destinationPort;
+    private int percentageOver;
 
     public String getDestinationHostName() {
         return destinationHostName;
@@ -24,5 +25,7 @@ public class AbstractTaskStatusMessage extends AbstractMessage {
     public void setDestinationPort(int destinationPort) {
         this.destinationPort = destinationPort;
     }
+    
+    
     
 }

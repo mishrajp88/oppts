@@ -5,10 +5,12 @@
  */
 package oppts.communication.memory;
 
+import oppts.communication.AbstractTaskInitMessage;
+
 /**
  *
  * @author jmishra
  */
-public class MemoryTaskInitMessage {
+public class MemoryTaskInitMessage extends AbstractTaskInitMessage {
     
 }

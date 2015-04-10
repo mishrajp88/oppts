@@ -5,10 +5,12 @@
  */
 package oppts.communication.memory;
 
+import oppts.communication.AbstractTaskStatusMessage;
+
 /**
  *
  * @author jmishra
  */
-public class MemoryTaskStatusMessage {
+public class MemoryTaskStatusMessage extends AbstractTaskStatusMessage {
     
 }
