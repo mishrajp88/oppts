@@ -12,5 +12,24 @@ import oppts.communication.AbstractTaskStatusMessage;
  * @author jmishra
  */
 public class DiskTaskStatusMessage extends AbstractTaskStatusMessage {
+
+    private int sizeOfDisk;
+    private int memoryBuffer;
+
+    public int sizeOfDisk() {
+        return sizeOfDisk;
+    }
+
+    public void sizeOfDisk(int sizeOfDisk) {
+        this.sizeOfDisk = sizeOfDisk;
+    }
+    
+    public int memoryBuffer() {
+        return memoryBuffer;
+    }
+
+    public void memoryBuffer(int memoryBuffer) {
+        this.memoryBuffer = memoryBuffer;
+    }
     
 }
