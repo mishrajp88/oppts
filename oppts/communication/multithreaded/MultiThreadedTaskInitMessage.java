@@ -13,4 +13,24 @@ import oppts.communication.AbstractTaskInitMessage;
  */
 public class MultiThreadedTaskInitMessage extends AbstractTaskInitMessage {
     
+    private long n;
+    private int numberOfThreads;
+
+    public long getN() {
+        return n;
+    }
+
+    public void setN(long n) {
+        this.n = n;
+    }
+
+    public int getNumberOfThreads() {
+        return numberOfThreads;
+    }
+
+    public void setNumberOfThreads(int numberOfThreads) {
+        this.numberOfThreads = numberOfThreads;
+    }
+    
+    
 }

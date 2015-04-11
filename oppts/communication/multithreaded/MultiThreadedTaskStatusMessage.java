@@ -13,4 +13,24 @@ import oppts.communication.AbstractTaskStatusMessage;
  */
 public class MultiThreadedTaskStatusMessage extends AbstractTaskStatusMessage {
     
+    private int threadNumber;
+    private long nHandled;
+
+    public int getThreadNumber() {
+        return threadNumber;
+    }
+
+    public void setThreadNumber(int threadNumber) {
+        this.threadNumber = threadNumber;
+    }
+
+    public long getnHandled() {
+        return nHandled;
+    }
+
+    public void setnHandled(long nHandled) {
+        this.nHandled = nHandled;
+    }
+    
+    
 }

@@ -68,4 +68,14 @@ public class NQueensTask extends AbstractTask implements Runnable {
         return true;
     }
 
+    public int getN() {
+        return n;
+    }
+
+    public void setN(int n) {
+        this.n = n;
+    }
+    
+    
+
 }
