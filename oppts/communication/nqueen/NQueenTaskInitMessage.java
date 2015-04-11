@@ -13,4 +13,15 @@ import oppts.communication.AbstractTaskInitMessage;
  */
 public class NQueenTaskInitMessage extends AbstractTaskInitMessage {
     
+    private int n;
+
+    public int getN() {
+        return n;
+    }
+
+    public void setN(int n) {
+        this.n = n;
+    }
+    
+    
 }

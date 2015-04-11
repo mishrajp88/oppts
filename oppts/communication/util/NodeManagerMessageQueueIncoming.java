@@ -10,11 +10,11 @@ import oppts.communication.AbstractMessage;
 public class NodeManagerMessageQueueIncoming {
     private static ConcurrentLinkedQueue<AbstractMessage> queue = new ConcurrentLinkedQueue<>();
     
-    public static void insertMessage(AbstractMessage message) {
+    public void insertMessage(AbstractMessage message) {
         queue.add(message);
     }
     
-    public static AbstractMessage getMessage() {
+    public AbstractMessage getMessage() {
         return queue.poll();            
     }
 }

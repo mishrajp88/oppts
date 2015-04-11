@@ -1,5 +1,9 @@
 package oppts;
 
+import oppts.communication.util.NodeManagerMessageQueueIncoming;
+import oppts.communication.util.NodeManagerMessageQueueOutgoing;
+
+
 /**
  *
  * @author jyotiprakash
@@ -19,6 +23,8 @@ public class OPPTSNodeManagerContext {
     
     private int nodeManagerPort;
     private String nodeManagerHostName;
+    private NodeManagerMessageQueueIncoming incomingQueue;
+    private NodeManagerMessageQueueOutgoing outgoingQueue;
 
     public int getNodeManagerPort() {
         return nodeManagerPort;
@@ -35,6 +41,24 @@ public class OPPTSNodeManagerContext {
     public void setNodeManagerHostName(String nodeManagerHostName) {
         this.nodeManagerHostName = nodeManagerHostName;
     }
+
+    public NodeManagerMessageQueueIncoming getIncomingQueue() {
+        return incomingQueue;
+    }
+
+    public void setIncomingQueue(NodeManagerMessageQueueIncoming incomingQueue) {
+        this.incomingQueue = incomingQueue;
+    }
+
+    public NodeManagerMessageQueueOutgoing getOutgoingQueue() {
+        return outgoingQueue;
+    }
+
+    public void setOutgoingQueue(NodeManagerMessageQueueOutgoing outgoingQueue) {
+        this.outgoingQueue = outgoingQueue;
+    }
+    
+    
     
     
 }

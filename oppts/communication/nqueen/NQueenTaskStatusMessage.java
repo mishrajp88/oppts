@@ -13,4 +13,14 @@ import oppts.communication.AbstractTaskStatusMessage;
  */
 public class NQueenTaskStatusMessage extends AbstractTaskStatusMessage {
     
+    private int numberOfColumnsHandled;
+
+    public int getNumberOfColumnsHandled() {
+        return numberOfColumnsHandled;
+    }
+
+    public void setNumberOfColumnsHandled(int numberOfColumnsHandled) {
+        this.numberOfColumnsHandled = numberOfColumnsHandled;
+    }
+        
 }

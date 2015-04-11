@@ -28,7 +28,7 @@ public class NodeManagerMessageReceiver implements Runnable {
                 Socket socket = serverSocket.accept();
                 ObjectInputStream inStream = new ObjectInputStream(socket.getInputStream());
                 AbstractMessage message = (AbstractMessage) inStream.readObject();
-                NodeManagerMessageQueueIncoming.insertMessage(message);
+                OPPTSNodeManagerContext.getInstance().getIncomingQueue().insertMessage(message);
                 socket.close();
             } catch (SocketException se) {
 
